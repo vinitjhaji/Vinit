@@ -36,23 +36,23 @@
 <body>
 @php
     $features = [
-        ['title' => 'WhatsApp Business API', 'description' => 'Official Meta Business Partner integration with direct API access and verified delivery.', 'icon' => 'Channel'],
-        ['title' => 'Unified Team Inbox', 'description' => 'Handle all customer conversations in one collaborative workspace with role-based access.', 'icon' => 'Inbox'],
-        ['title' => 'Visual Bot Builder', 'description' => 'Build chatbot journeys with drag-and-drop flows and reusable automation blocks.', 'icon' => 'Bot'],
-        ['title' => 'Native Payments', 'description' => 'Accept payments directly in chat to reduce checkout friction and increase conversions.', 'icon' => 'Pay'],
-        ['title' => 'Multi-Channel Support', 'description' => 'Manage WhatsApp, Instagram, Facebook Messenger, and web widget threads in one view.', 'icon' => 'Omni'],
-        ['title' => 'Automation Builder', 'description' => 'Connect 1000+ tools and trigger workflows for lead qualification, support, and follow-up.', 'icon' => 'Flow'],
+        ['title' => 'WhatsApp Business API', 'description' => 'Official Meta Business Partner integration with direct API access'],
+        ['title' => 'Unified Team Inbox', 'description' => 'Centralized communication hub for seamless team collaboration'],
+        ['title' => 'Visual Bot Builder', 'description' => 'Create intelligent chatbots with our drag-and-drop interface'],
+        ['title' => 'Native Payments', 'description' => 'Integrated payment processing for WhatsApp transactions'],
+        ['title' => 'Multi-Channel Support', 'description' => 'Manage WhatsApp, Facebook & Instagram from one platform'],
+        ['title' => 'Automation Builder', 'description' => 'Create custom workflows with 1000+ integrations'],
     ];
 
     $solutions = [
-        ['title' => 'Bulk Messaging', 'icon' => 'Bulk'],
-        ['title' => 'Order Updates', 'icon' => 'Order'],
-        ['title' => 'Customer Support', 'icon' => 'Help'],
-        ['title' => 'Smart Chatbots', 'icon' => 'AI'],
-        ['title' => 'Notifications', 'icon' => 'Bell'],
-        ['title' => 'Payment Collection', 'icon' => 'Bill'],
-        ['title' => 'External Integrations', 'icon' => 'API'],
-        ['title' => 'Team Collaboration', 'icon' => 'Team'],
+        'Bulk Messaging',
+        'Order Updates',
+        'Customer Support',
+        'Smart Chatbots',
+        'Notifications',
+        'Payment Collection',
+        'External Integration',
+        'Team Collaboration',
     ];
 
     $stats = [
@@ -60,22 +60,22 @@
         ['value' => '100+', 'label' => 'Government Bodies'],
         ['value' => '500+', 'label' => 'Global Partners'],
         ['value' => '50+', 'label' => 'Countries Served'],
-        ['value' => '25M+', 'label' => 'Messages / Day'],
-        ['value' => '100K+', 'label' => 'Bots Created'],
+        ['value' => '25M+', 'label' => 'Messages/Day', 'note' => 'Processed through our platform'],
+        ['value' => '100K+', 'label' => 'Bots Created', 'note' => 'Automating customer interactions'],
     ];
 
     $brands = [
         [
             'name' => '11 Automations',
-            'description' => 'Enterprise-grade automation solutions built for teams that need reliability, control, and scale.',
+            'description' => 'Enterprise-grade automation solutions designed to scale your business operations with advanced workflow capabilities and intelligent process optimization.',
         ],
         [
             'name' => 'Automations Builder',
-            'description' => 'A no-code workflow platform that helps non-technical teams automate repetitive business operations.',
+            'description' => 'Powerful no-code automation platform that empowers teams to create custom workflows, integrate systems, and automate complex business processes effortlessly.',
         ],
         [
             'name' => '1 Automations',
-            'description' => 'Simple automation tools for smaller businesses to streamline day-to-day communication and support.',
+            'description' => 'Streamlined automation suite focused on delivering simple, effective solutions for small businesses to automate their essential day-to-day operations.',
         ],
     ];
 @endphp
@@ -84,13 +84,18 @@
     <div class="container nav-wrapper">
         <a href="#" class="brand">
             <img class="brand-icon" src="/images/combot-icon.svg" alt="Com.bot icon">
-            <span>Com.bot</span>
+            <span class="brand-text">
+                <strong>COM.BOT</strong>
+                <small>AUTOMATING GROWTH</small>
+            </span>
         </a>
         <nav class="main-nav">
+            <a href="#">Home</a>
             <a href="#features">Features</a>
-            <a href="#solutions">Solutions</a>
-            <a href="#stats">Stats</a>
+            <a href="#solutions">Use Cases</a>
+            <a href="#pricing">Pricing</a>
             <a href="#contact">Contact</a>
+            <a href="#affiliate">Affiliate</a>
         </nav>
         <a class="nav-cta" href="https://v3.com.bot/register" target="_blank" rel="noopener noreferrer">Get Started</a>
     </div>
@@ -98,38 +103,42 @@
 
 <main>
     <section class="hero">
-        <div class="container hero-grid">
-            <div>
-                <p class="eyebrow">Official Partner · Meta Business Solution</p>
+        <div class="container">
+            <div class="hero-inner">
+                <div class="partner-badge">
+                    <div class="meta-mark">∞ Meta</div>
+                    <div>
+                        <strong>Official Partner</strong>
+                        <p>Meta Business Solution</p>
+                    </div>
+                </div>
                 <h1>AI Unified Business Communication Platform</h1>
                 <p class="hero-text">
-                    Connect with customers across all channels through one powerful dashboard.
-                    Automate conversations, increase sales, and deliver exceptional support.
+                    Connect with customers across all channels through a single, powerful platform.
+                    Automate conversations, boost sales, and deliver exceptional support.
                 </p>
                 <div class="hero-actions">
-                    <a class="btn btn-primary" href="https://wa.me/918069871810?text=inquire" target="_blank" rel="noopener noreferrer">Schedule a Call</a>
+                    <a class="btn btn-primary" href="https://wa.me/918069871810?text=inquire" target="_blank" rel="noopener noreferrer">Schedule A Call</a>
                     <a class="btn btn-secondary" href="https://v3.com.bot/register" target="_blank" rel="noopener noreferrer">Get Started</a>
                 </div>
-                <ul class="channel-list">
-                    <li>WhatsApp Business</li>
-                    <li>Facebook Messenger</li>
-                    <li>Instagram DM</li>
-                    <li>Web Widget</li>
-                </ul>
-            </div>
-            <div class="hero-card">
-                <img
-                    class="hero-visual"
-                    src="/images/hero-automation.svg"
-                    alt="Com.bot dashboard and automation illustration"
-                >
-                <p class="hero-card-label">Live Automation Snapshot</p>
-                <h3>Conversations that convert.</h3>
-                <ul>
-                    <li><span>Lead qualification</span><strong>+48%</strong></li>
-                    <li><span>Response time</span><strong>&lt; 60 sec</strong></li>
-                    <li><span>Support tickets resolved</span><strong>24/7</strong></li>
-                </ul>
+                <div class="channel-grid">
+                    <article class="channel-card">
+                        <span>💬</span>
+                        <p>WhatsApp Business</p>
+                    </article>
+                    <article class="channel-card">
+                        <span>🗨️</span>
+                        <p>Facebook Messenger</p>
+                    </article>
+                    <article class="channel-card">
+                        <span>📸</span>
+                        <p>Instagram DM</p>
+                    </article>
+                    <article class="channel-card">
+                        <span>🌐</span>
+                        <p>Web Widget</p>
+                    </article>
+                </div>
             </div>
         </div>
     </section>
@@ -141,10 +150,6 @@
             <div class="card-grid three-col">
                 @foreach ($features as $feature)
                     <article class="card">
-                        <div class="card-header">
-                            <img class="card-icon" src="/images/combot-icon.svg" alt="">
-                            <span class="card-chip">{{ $feature['icon'] }}</span>
-                        </div>
                         <h3>{{ $feature['title'] }}</h3>
                         <p>{{ $feature['description'] }}</p>
                     </article>
@@ -160,11 +165,7 @@
             <div class="card-grid four-col">
                 @foreach ($solutions as $solution)
                     <article class="card solution-card">
-                        <div class="card-header">
-                            <img class="card-icon" src="/images/combot-icon.svg" alt="">
-                            <span class="card-chip">{{ $solution['icon'] }}</span>
-                        </div>
-                        <h3>{{ $solution['title'] }}</h3>
+                        <h3>{{ $solution }}</h3>
                         <p>Built to improve speed, consistency, and customer experience across every touchpoint.</p>
                     </article>
                 @endforeach
@@ -181,6 +182,9 @@
                     <div class="stat-card">
                         <p class="stat-value">{{ $stat['value'] }}</p>
                         <p class="stat-label">{{ $stat['label'] }}</p>
+                        @if (!empty($stat['note']))
+                            <p class="stat-note">{{ $stat['note'] }}</p>
+                        @endif
                     </div>
                 @endforeach
             </div>
@@ -194,14 +198,31 @@
             <div class="card-grid three-col">
                 @foreach ($brands as $brand)
                     <article class="card">
-                        <div class="card-header">
-                            <img class="card-icon" src="/images/combot-icon.svg" alt="">
-                            <span class="card-chip">Brand</span>
-                        </div>
                         <h3>{{ $brand['name'] }}</h3>
                         <p>{{ $brand['description'] }}</p>
                     </article>
                 @endforeach
+            </div>
+        </div>
+    </section>
+
+    <section id="pricing" class="section alt-bg">
+        <div class="container">
+            <h2>Flexible Pricing</h2>
+            <p class="section-subtitle">Plans for startups, growth teams, and enterprise organizations.</p>
+            <div class="card-grid three-col">
+                <article class="card">
+                    <h3>Starter</h3>
+                    <p>Perfect for small teams launching their first WhatsApp automation flows.</p>
+                </article>
+                <article class="card">
+                    <h3>Growth</h3>
+                    <p>Built for scaling teams that need advanced automation, campaigns, and analytics.</p>
+                </article>
+                <article class="card">
+                    <h3>Enterprise</h3>
+                    <p>Custom volume, dedicated support, advanced governance, and secure integrations.</p>
+                </article>
             </div>
         </div>
     </section>
@@ -233,16 +254,27 @@
                     and scale customer support without scaling overhead.
                 </p>
                 <ul class="check-list">
-                    <li>Official WhatsApp Business API integration</li>
-                    <li>Enterprise-grade security and reliability</li>
-                    <li>Quick setup with guided onboarding</li>
+                    <li>Official Meta Partner with WhatsApp Business API</li>
+                    <li>Enterprise security with strong data protection</li>
+                    <li>Quick setup and integration in minutes</li>
                 </ul>
             </div>
             <div class="cta-card">
                 <img class="cta-visual" src="/images/hero-automation.svg" alt="Automation workflow preview">
-                <h3>Book Your Demo</h3>
-                <p>Get a personalized walkthrough tailored to your business goals.</p>
+                <h3>Get Started Today</h3>
+                <p>See how Com.bot can help your business grow with a personalized demo.</p>
                 <a class="btn btn-primary full" href="https://wa.me/918069871810?text=inquire" target="_blank" rel="noopener noreferrer">Send Message</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="affiliate" class="section">
+        <div class="container narrow">
+            <h2>Affiliate Program</h2>
+            <p class="section-subtitle">Partner with us and grow with attractive referral rewards for every successful business onboarding.</p>
+            <div class="affiliate-box">
+                <p>Become an affiliate and help businesses adopt intelligent communication automation with Com.bot.</p>
+                <a class="btn btn-secondary" href="https://v3.com.bot/register" target="_blank" rel="noopener noreferrer">Join Affiliate Network</a>
             </div>
         </div>
     </section>
