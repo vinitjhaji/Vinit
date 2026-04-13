@@ -11,7 +11,19 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    @if (file_exists(public_path('build/manifest.json')) || file_exists(public_path('hot')))
+    @if (file_exists(public_path('build/manifest.json')))
+        @php
+            $manifest = json_decode(file_get_contents(public_path('build/manifest.json')), true);
+            $cssAsset = $manifest['resources/css/app.css']['file'] ?? null;
+            $jsAsset = $manifest['resources/js/app.js']['file'] ?? null;
+        @endphp
+        @if ($cssAsset)
+            <link rel="stylesheet" href="{{ '/build/' . ltrim($cssAsset, '/') }}">
+        @endif
+        @if ($jsAsset)
+            <script type="module" src="{{ '/build/' . ltrim($jsAsset, '/') }}"></script>
+        @endif
+    @elseif (file_exists(public_path('hot')))
         @vite(['resources/css/app.css', 'resources/js/app.js'])
     @else
         <style>
