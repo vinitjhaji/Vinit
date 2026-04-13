@@ -11,6 +11,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" href="/images/combot-icon.svg">
     @if (file_exists(public_path('build/manifest.json')))
         @php
             $manifest = json_decode(file_get_contents(public_path('build/manifest.json')), true);
@@ -35,17 +36,23 @@
 <body>
 @php
     $features = [
-        ['title' => 'WhatsApp Business API', 'description' => 'Official Meta Business Partner integration with direct API access and verified delivery.'],
-        ['title' => 'Unified Team Inbox', 'description' => 'Handle all customer conversations in one collaborative workspace with role-based access.'],
-        ['title' => 'Visual Bot Builder', 'description' => 'Build chatbot journeys with drag-and-drop flows and reusable automation blocks.'],
-        ['title' => 'Native Payments', 'description' => 'Accept payments directly in chat to reduce checkout friction and increase conversions.'],
-        ['title' => 'Multi-Channel Support', 'description' => 'Manage WhatsApp, Instagram, Facebook Messenger, and web widget threads in one view.'],
-        ['title' => 'Automation Builder', 'description' => 'Connect 1000+ tools and trigger workflows for lead qualification, support, and follow-up.'],
+        ['title' => 'WhatsApp Business API', 'description' => 'Official Meta Business Partner integration with direct API access and verified delivery.', 'icon' => 'Channel'],
+        ['title' => 'Unified Team Inbox', 'description' => 'Handle all customer conversations in one collaborative workspace with role-based access.', 'icon' => 'Inbox'],
+        ['title' => 'Visual Bot Builder', 'description' => 'Build chatbot journeys with drag-and-drop flows and reusable automation blocks.', 'icon' => 'Bot'],
+        ['title' => 'Native Payments', 'description' => 'Accept payments directly in chat to reduce checkout friction and increase conversions.', 'icon' => 'Pay'],
+        ['title' => 'Multi-Channel Support', 'description' => 'Manage WhatsApp, Instagram, Facebook Messenger, and web widget threads in one view.', 'icon' => 'Omni'],
+        ['title' => 'Automation Builder', 'description' => 'Connect 1000+ tools and trigger workflows for lead qualification, support, and follow-up.', 'icon' => 'Flow'],
     ];
 
     $solutions = [
-        'Bulk Messaging', 'Order Updates', 'Customer Support', 'Smart Chatbots',
-        'Notifications', 'Payment Collection', 'External Integrations', 'Team Collaboration',
+        ['title' => 'Bulk Messaging', 'icon' => 'Bulk'],
+        ['title' => 'Order Updates', 'icon' => 'Order'],
+        ['title' => 'Customer Support', 'icon' => 'Help'],
+        ['title' => 'Smart Chatbots', 'icon' => 'AI'],
+        ['title' => 'Notifications', 'icon' => 'Bell'],
+        ['title' => 'Payment Collection', 'icon' => 'Bill'],
+        ['title' => 'External Integrations', 'icon' => 'API'],
+        ['title' => 'Team Collaboration', 'icon' => 'Team'],
     ];
 
     $stats = [
@@ -75,7 +82,10 @@
 
 <header class="site-header">
     <div class="container nav-wrapper">
-        <a href="#" class="brand">Com.bot</a>
+        <a href="#" class="brand">
+            <img class="brand-icon" src="/images/combot-icon.svg" alt="Com.bot icon">
+            <span>Com.bot</span>
+        </a>
         <nav class="main-nav">
             <a href="#features">Features</a>
             <a href="#solutions">Solutions</a>
@@ -108,6 +118,11 @@
                 </ul>
             </div>
             <div class="hero-card">
+                <img
+                    class="hero-visual"
+                    src="/images/hero-automation.svg"
+                    alt="Com.bot dashboard and automation illustration"
+                >
                 <p class="hero-card-label">Live Automation Snapshot</p>
                 <h3>Conversations that convert.</h3>
                 <ul>
@@ -126,6 +141,10 @@
             <div class="card-grid three-col">
                 @foreach ($features as $feature)
                     <article class="card">
+                        <div class="card-header">
+                            <img class="card-icon" src="/images/combot-icon.svg" alt="">
+                            <span class="card-chip">{{ $feature['icon'] }}</span>
+                        </div>
                         <h3>{{ $feature['title'] }}</h3>
                         <p>{{ $feature['description'] }}</p>
                     </article>
@@ -141,7 +160,11 @@
             <div class="card-grid four-col">
                 @foreach ($solutions as $solution)
                     <article class="card solution-card">
-                        <h3>{{ $solution }}</h3>
+                        <div class="card-header">
+                            <img class="card-icon" src="/images/combot-icon.svg" alt="">
+                            <span class="card-chip">{{ $solution['icon'] }}</span>
+                        </div>
+                        <h3>{{ $solution['title'] }}</h3>
                         <p>Built to improve speed, consistency, and customer experience across every touchpoint.</p>
                     </article>
                 @endforeach
@@ -171,6 +194,10 @@
             <div class="card-grid three-col">
                 @foreach ($brands as $brand)
                     <article class="card">
+                        <div class="card-header">
+                            <img class="card-icon" src="/images/combot-icon.svg" alt="">
+                            <span class="card-chip">Brand</span>
+                        </div>
                         <h3>{{ $brand['name'] }}</h3>
                         <p>{{ $brand['description'] }}</p>
                     </article>
@@ -212,6 +239,7 @@
                 </ul>
             </div>
             <div class="cta-card">
+                <img class="cta-visual" src="/images/hero-automation.svg" alt="Automation workflow preview">
                 <h3>Book Your Demo</h3>
                 <p>Get a personalized walkthrough tailored to your business goals.</p>
                 <a class="btn btn-primary full" href="https://wa.me/918069871810?text=inquire" target="_blank" rel="noopener noreferrer">Send Message</a>

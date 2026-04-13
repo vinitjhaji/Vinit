@@ -67,9 +67,18 @@ a {
 }
 
 .brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.55rem;
     font-size: 1.25rem;
     font-weight: 800;
     letter-spacing: 0.02em;
+}
+
+.brand-icon {
+    width: 1.45rem;
+    height: 1.45rem;
+    border-radius: 8px;
 }
 
 .main-nav {
@@ -188,6 +197,14 @@ h1 {
     padding: 1.4rem;
 }
 
+.hero-visual {
+    display: block;
+    width: 100%;
+    border-radius: 12px;
+    border: 1px solid rgb(255 255 255 / 12%);
+    margin-bottom: 1rem;
+}
+
 .hero-card-label {
     color: var(--accent);
     font-size: 0.85rem;
@@ -267,6 +284,28 @@ h2 {
 .card h3 {
     margin: 0 0 0.5rem;
     font-size: 1.04rem;
+}
+
+.card-header {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.55rem;
+    margin-bottom: 0.65rem;
+}
+
+.card-icon {
+    width: 1.25rem;
+    height: 1.25rem;
+    border-radius: 6px;
+}
+
+.card-chip {
+    font-size: 0.72rem;
+    color: #b9ceff;
+    border: 1px solid #34508f;
+    background: rgb(77 141 255 / 14%);
+    border-radius: 999px;
+    padding: 0.15rem 0.5rem;
 }
 
 .card p {
@@ -364,6 +403,13 @@ h2 {
     background: var(--surface);
     border: 1px solid var(--border);
     padding: 1.2rem;
+}
+
+.cta-visual {
+    width: 100%;
+    border-radius: 10px;
+    border: 1px solid rgb(255 255 255 / 10%);
+    margin-bottom: 0.85rem;
 }
 
 .cta-card h3 {
